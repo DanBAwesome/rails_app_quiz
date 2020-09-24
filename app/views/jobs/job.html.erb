@@ -1,0 +1,36 @@
+<div class="card">
+    <div class="card-header">
+        <%= @job.job_title %>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-lg-6">
+                Employer Name: <%= @job.employer_name %>
+            </div>
+            <div class="col-lg-6">
+                Employer Description: <%= @job.employer_description %>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                Job Description: <%= @job.job_description %>
+            </div>
+            <div class="col-lg-6">
+                Years of Experience: <%= @job.years_of_experience %>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                Education Requirement: <%= @job.education_requirement ? @job.education_requirement : "None" %>
+            </div>
+            <div class="col-lg-6">
+                Industry: <%= @job.industry %> 
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                Base Salary: <%= @job.base_salary ? @job.base_salary : "Negotiable" %>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,60 @@
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                Employer Name
+            </th>
+            <th>
+                Employer Description
+            </th>
+            <th>
+                Job Title
+            </th>
+            <th>
+                Job Description
+            </th>
+            <th>
+                Years of Experience
+            </th>
+            <th>
+                Education Requirement
+            </th>
+            <th>
+                Industry
+            </th>
+            <th>
+                Base Salary
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @jobs.each do |job| %>
+            <tr>
+                <td>
+                    <%= job.employer_name %>
+                </td>
+                <td>
+                    <%= job.employer_description %>
+                </td>
+                <td>
+                    <%= job.job_title %>
+                </td>
+                <td>
+                    <%= job.job_description %>
+                </td>
+                <td>
+                    <%= job.years_of_experience %>
+                </td>
+                <td>
+                    <%= job.education_requirement ? job.education_requirement : "None" %>
+                </td>
+                <td>
+                    <%= job.industry %>
+                </td>
+                <td>
+                    <%= job.base_salary ? job.base_salary : "Negotiable" %>
+                </td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
